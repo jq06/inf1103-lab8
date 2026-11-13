@@ -2,6 +2,8 @@ from file_handler import load_inventory, save_inventory
 from physical_product import PhysicalProduct
 from digital_product import DigitalProduct
 from supplier import Supplier
+from can_be_shipped import CanBeShipped
+from inventory import Inventory
 
 def get_float_input(message):
     while True:
@@ -59,7 +61,7 @@ def main():
         choice = input("Enter option: ").strip()
 
         if choice == "1":
-            inventory.display_all()
+            inventory.display_all_products()
 
         elif choice == "2":
             print("\nAdd New Product")
@@ -105,7 +107,7 @@ def main():
             print("\nUpdate Stock")
 
             prod_id = input("Enter Product ID: ").strip()
-            product = inventory.search_product(prod_id)
+            product = inventory.find_product(prod_id)
 
             if product is None:
                 print("Product not found.")
