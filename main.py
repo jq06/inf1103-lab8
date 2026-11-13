@@ -81,19 +81,21 @@ def main():
 
             price = get_float_input("Price: $")
             stock = get_int_input("Stock Quantity: ")
+            supplier = get_supplier_input(inventory)
+
 
             if product_type == "1":
                 weight = get_float_input("Weight (kg): ")
 
                 product = PhysicalProduct(
-                    prod_id, name, price, stock, weight
+                    prod_id, name, price, stock, weight, supplier
                 )
 
             else:
                 download_size = get_float_input("Download Size (MB): ")
 
                 product = DigitalProduct(
-                    prod_id, name, price, stock, download_size
+                    prod_id, name, price, stock, download_size, supplier
                 )
 
             inventory.add_product(product)
