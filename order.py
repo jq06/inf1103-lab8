@@ -25,3 +25,9 @@ class Order:
 
     def calculate_total(self) -> float:
         return sum(line.calculate_subtotal() for line in self.__order_lines)
+
+    def display_order(self) -> None:
+        print(f"\nOrder {self.order_id}")
+        for line in self.__order_lines:
+            line.display_information()
+        print(f"Total: ${self.calculate_total():.2f}")
