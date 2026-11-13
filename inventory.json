@@ -5,6 +5,11 @@
         "name": "pen",
         "price": 2.0,
         "stock": 24,
+        "supplier": {
+            "id": "S000",
+            "name": "Unknown Supplier",
+            "email": "unknown@example.com"
+        },
         "weight": 0.5
     },
     {
@@ -13,6 +18,11 @@
         "name": "gift card",
         "price": 23.0,
         "stock": 14,
+        "supplier": {
+            "id": "S000",
+            "name": "Unknown Supplier",
+            "email": "unknown@example.com"
+        },
         "download_size": 7.0
     }
 ]
