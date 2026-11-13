@@ -4,9 +4,10 @@ from can_be_shipped import CanBeShipped
 
 class PhysicalProduct(Product, CanBeShipped):
 
-    def __init__(self, product_id, name, price, stock, weight):
-        super().__init__(product_id, name, price, stock)
-        self.weight = weight
+    def __init__(self, product_id: str, name: str, price: float,
+                 stock: int, weight: float, supplier: Supplier) -> None:
+        super().__init__(product_id, name, price, stock, supplier)
+        self.weight: float = weight
 
     def display_information(self) -> None:
         super().display_information()
