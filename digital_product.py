@@ -7,9 +7,9 @@ class DigitalProduct(Product):
         super().__init__(product_id, name, price, stock)
         self.download_size = download_size
 
-    def display_information(self):
+    def display_information(self) -> None:
         super().display_information()
         print(f"Download Size: {self.download_size} MB")
 
-    def get_fulfilment_info(self):
+    def get_fulfilment_info(self) -> str:
         return "This product is delivered digitally."
