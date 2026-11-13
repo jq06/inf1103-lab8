@@ -1,0 +1,18 @@
+[
+    {
+        "type": "physical",
+        "id": "1",
+        "name": "pen",
+        "price": 2.0,
+        "stock": 24,
+        "weight": 0.5
+    },
+    {
+        "type": "digital",
+        "id": "2",
+        "name": "gift card",
+        "price": 23.0,
+        "stock": 14,
+        "download_size": 7.0
+    }
+]
