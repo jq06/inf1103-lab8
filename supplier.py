@@ -4,3 +4,8 @@ class Supplier:
         self.supplier_id = supplier_id
         self.name = name
         self.contact_email = contact_email
+
+    def display_information(self):
+        print(f"Supplier ID: {self.supplier_id}")
+        print(f"Supplier Name: {self.name}")
+        print(f"Contact Email: {self.contact_email}")
