@@ -1,7 +1,7 @@
 from file_handler import load_inventory, save_inventory
 from physical_product import PhysicalProduct
 from digital_product import DigitalProduct
-
+from supplier import Supplier
 
 def get_float_input(message):
     while True:
@@ -30,6 +30,17 @@ def get_int_input(message):
         except ValueError:
             print("Invalid input. Please enter a whole number.")
 
+def get_supplier_input(inventory: Inventory) -> Supplier:
+    supplier_id = input("Supplier ID: ").strip()
+
+    for product in inventory.products:      # reuse an existing supplier
+        if product.supplier.supplier_id == supplier_id:
+            print(f"Using existing supplier: {product.supplier.name}")
+            return product.supplier
+
+    name = input("Supplier Name: ").strip()
+    email = input("Supplier Email: ").strip()
+    return Supplier(supplier_id, name, email)
 
 def main():
     print("INVENTORY MANAGEMENT SYSTEM")
